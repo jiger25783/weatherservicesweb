@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "google"],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-unused-expressions": "off",
+    "max-len": [1, 80, 2, {
+      "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
+      "ignoreUrls": true
+    }]
+  }
+}

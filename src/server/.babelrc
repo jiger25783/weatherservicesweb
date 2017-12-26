@@ -1,0 +1,17 @@
+{
+  "presets": ["es2015", "stage-0"],
+  "plugins": [
+    ["module-resolver", {
+      "cwd": "./src/server",
+      "root": ["./module"]
+    }],
+    "transform-class-properties",
+    "transform-runtime"
+  ],
+  "ignore": ["node_modules", "src/**/*.spec.js"],
+  "env": {
+    "development": {
+      "sourceMaps": "inline"
+    }
+  }
+}

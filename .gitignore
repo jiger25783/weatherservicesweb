@@ -1,0 +1,22 @@
+# mac
+.DS_Store
+
+# ide
+.idea
+.vscode
+.project
+
+# binaries
+bin
+
+# external packages
+node_modules
+bower_components
+
+# esdoc
+src/server/doc
+
+# coverage
+npm-debug.log
+.nyc_output
+coverage

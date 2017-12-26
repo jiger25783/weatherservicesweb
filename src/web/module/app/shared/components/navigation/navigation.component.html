@@ -1,0 +1,30 @@
+<!-- Navigation bar -->
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-faded fixed-top">
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler navbar-toggler-right" type="button"
+            *ngIf="isAuthenticated()" (click)="isNavbarCollapsed = !isNavbarCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/">
+        <div class="logo">Weather Services</div>
+    </a>
+
+    <!-- Logout button -->
+    <div class="collapse navbar-collapse"
+         *ngIf="isAuthenticated()" [ngbCollapse]="!isNavbarCollapsed">
+        <div class="navbar-nav ml-auto">
+            <div class="nav-item dropdown" ngbDropdown>
+                <a href="javascript: void(0);" class="nav-link dropdown-toggle" ngbDropdownToggle>
+                    {{profile.email}}
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" (click)="logout()"
+                       href="javascript: void(0);">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

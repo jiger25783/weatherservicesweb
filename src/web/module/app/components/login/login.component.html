@@ -1,0 +1,24 @@
+<!-- Content -->
+<div class="row">
+    <div class="col">
+        <div class="card login-card">
+            <div class="card-header">Log In to Continue</div>
+            <div class="card-block">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label class="col-form-label">E-mail</label>
+                        <input type="email" class="form-control" formControlName="email">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label">Password</label>
+                        <input type="password" class="form-control" formControlName="password">
+                    </div>
+                    <div class="clearfix">
+                        <button type="submit" class="btn btn-success float-xs-right"
+                                [disabled]="loginForm.invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

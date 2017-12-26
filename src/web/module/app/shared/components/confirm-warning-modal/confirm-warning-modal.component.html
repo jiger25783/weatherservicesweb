@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title">Warning</h4>
+    <button type="button" class="close" aria-label="Close"
+            (click)="activeModal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <p>Are you sure you want to continue?</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-warning"
+            (click)="activeModal.close()">Continue</button>
+    <button type="button" class="btn btn-secondary"
+            (click)="activeModal.dismiss()">
+        <span class="fa fa-sign-out hidden-sm-up"></span>
+        <span class="hidden-xs-down">Cancel and Go Back</span>
+    </button>
+</div>

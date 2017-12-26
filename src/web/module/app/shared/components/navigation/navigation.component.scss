@@ -1,0 +1,26 @@
+.navbar {
+  z-index: 1001;
+  min-height: 55px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  background-color: #005aa5;
+  line-height: 1;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+  color: rgba(255,255,255,.95);
+}
+
+.navbar-inverse .navbar-nav .nav-link:focus {
+  color: rgba(255,255,255, 95);
+}
+
+.navbar-inverse .navbar-nav .nav-link:hover {
+  color: rgba(255,255,255, 1);
+}
+
+.logo {
+  color: #fff;
+}

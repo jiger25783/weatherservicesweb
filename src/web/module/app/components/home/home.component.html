@@ -1,0 +1,40 @@
+<!-- Current state -->
+<h4 class="current-state">Dashboard</h4>
+
+<!-- Breadcrumbs -->
+<div class="row">
+    <div class="col">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">
+                <a routerLink="/">Home</a>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="row">
+    <div class="col">
+
+        <!-- Accordion panel group -->
+        <ngb-accordion activeIds="weatherPanel" closeOthers="true">
+
+            <!-- Weather panel-->
+            <ngb-panel id="weatherPanel" title="Weather">
+                <ng-template ngbPanelContent>
+                    <div class="row p-3">
+                        <div class="col-md-5 col-12">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h4 class="card-title">Weather</h4>
+                                    <p class="card-text">Welcome to weather service</p>
+                                    <button routerLink="/weather" class="btn btn-success">Go</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- Navigation -->
+<sample-navigation></sample-navigation>
+
+<!-- Notifications-->
+<simple-notifications [options]="notificationOptions"></simple-notifications>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Sidebar -->
+        <sample-sidebar [isVisible]="isLoginPage() === false"></sample-sidebar>
+
+        <!-- Content -->
+        <div class="pt-3"
+             [ngClass]="{'col-sm-8 offset-sm-4 col-md-9 offset-md-3': !isLoginPage(),'col-12': isLoginPage()}">
+            <div class="px-2 pb-5">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

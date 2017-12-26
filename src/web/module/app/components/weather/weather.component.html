@@ -1,0 +1,62 @@
+<!-- Current state -->
+<h4 class="current-state">Weather Services</h4>
+
+<!-- Breadcrumbs -->
+<div class="row">
+    <div class="col">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a routerLink="/">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Past week weather information</li>
+        </ol>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-7">
+        <input type="text" placeholder="Enter your location(city,state)" class="form-control" [(ngModel)]="location">
+    </div>
+    <div class="col-md-8 col-sm-6 col-5">
+        <div class="clearfix">
+            <div class="float-sm-right">
+                <a class="btn btn-success" (click)="getWeatherInfo()">Search</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div *ngIf="errorAdding" class="alert alert-danger">
+            <div *ngIf="errorAdding">
+                {{errorMessage}}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Table of foods -->
+<table class="table table-hover mt-2">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Day high</th>
+            <th>Day low</th>
+            <th>Humidity</th>
+            <th>Wind Speed</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let weatherinfo of (weatherInfoArr)"
+            (click)="onSelect(weatherinfo)">
+            <td>{{weatherinfo.date}}</td>
+            <td>{{weatherinfo.temperatureHigh}}</td>
+            <td>{{weatherinfo.temperatureLow}}</td>
+            <td>{{weatherinfo.humidity}}</td>
+            <td>{{weatherinfo.windSpeed}}</td>
+            <td>{{weatherinfo.summary}}</td>
+        </tr>
+    </tbody>
+</table>

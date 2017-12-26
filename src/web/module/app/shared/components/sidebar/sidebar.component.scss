@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f3f3f3;
+  border-right: 1px solid #dfdfdf;
+
+  .nav {
+    margin-bottom: 20px;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding-left: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav-item:last-child {
+    border-bottom: 0;
+  }
+
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
+
+  .nav-link {
+    padding-left: 20px;
+    border-radius: 0;
+    color: #333;
+  }
+
+  .nav-link.active {
+    color: #004f90;
+    background-color: #eaeaea;
+  }
+}

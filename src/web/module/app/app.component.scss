@@ -1,0 +1,125 @@
+* {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 55px;
+  margin-bottom: 60px;
+  background-color: #fff;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+h4.current-state {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+}
+
+.navbar {
+}
+
+code {
+  font-size: 80%;
+}
+
+.breadcrumb {
+  background: #f3f3f3;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f105";
+}
+
+.sample-card {
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px #bbb;
+  border: none;
+
+  @media (max-width: 768px) {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 10px;
+  }
+
+  .card-header {
+    padding: 7px 10px;
+    border: 1px solid #3a923f;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    color: #fff;
+    background-color: #3a923f;
+    font-family: 'Raleway', 'Arial', sans-serif;
+
+    .dropdown button {
+      outline: 0;
+      color: #fff;
+    }
+
+    .dropdown button:hover {
+      color: #ffc580;
+      text-decoration: none;
+    }
+
+    .dropdown button:focus {
+      text-decoration: none;
+      box-shadow: none;
+    }
+  }
+
+  .card-block {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    padding: 10px 10px 10px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    @media (max-width: 768px) {
+      padding: 5px 5px 0;
+    }
+  }
+}
+
+/* Input Validation */
+input.validate.ng-invalid.ng-dirty {
+  background-color: #ffefeb !important;
+  border-color: #FFA6A6;
+}
+input.validate.ng-valid.ng-dirty {
+  background-color: #FCFFFC !important;
+  border-color: #A2D8AE;
+}
+textarea.validate.ng-invalid.ng-dirty {
+  background-color: #ffefeb !important;
+  border-color: #FFA6A6;
+}
+textarea.validate.ng-valid.ng-dirty {
+  background-color: #FCFFFC !important;
+  border-color: #A2D8AE;
+}
+select.validate.ng-invalid.ng-dirty {
+  background-color: #ffefeb !important;
+  border-color: #FFA6A6;
+}
+select.validate.ng-valid.ng-dirty {
+  background-color: #FCFFFC !important;
+  border-color: #A2D8AE;
+}
