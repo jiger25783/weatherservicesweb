@@ -29,7 +29,7 @@ export class WeatherComponent implements OnInit {
     this.errorMessage = ""
     this.weatherService.getWeatherInformation("UNKNOWN")
       .subscribe(response => {
-         this.weatherInfoArr = response.daily
+         this.populateWeatherInfo(response)
         //console.log(this.weatherInfoArr)
       },
       err =>{
@@ -45,7 +45,7 @@ export class WeatherComponent implements OnInit {
     this.weatherInfoArr =[]
     this.weatherService.getWeatherInformation(this.location)
        .subscribe(response => {
-         this.weatherInfoArr = response.daily
+         this.populateWeatherInfo(response)
         //console.log(this.weatherInfoArr)
       },
       err =>{
@@ -53,5 +53,17 @@ export class WeatherComponent implements OnInit {
         this.errorAdding= true;
         this.errorMessage= "Error occured please try after sometime: Our services are currently down"
       });
+  }
+
+  populateWeatherInfo(response): void{
+    this.weatherInfoArr = response.daily
+         let respLoc = ""
+         if(!this.location && this.location == ""){
+           respLoc += response.city? response.city: ""
+           respLoc += response.state? ", " + response.state: ""
+           respLoc += response.country? ", " + response.country: ""
+           this.location = respLoc
+         }
+        //console.log(this.weatherInfoArr)
   }
 }
