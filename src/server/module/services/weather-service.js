@@ -24,7 +24,7 @@ export default class WeatherService {
     console.log("inside getWeatherInformationFromDarkSky")
     return new Promise((resolve, reject) => {
       let url = 'https://'+ this.config.apiServerUid +':' + this.config.apiServerPwd 
-                + '@' + this.config.apiServerHost
+                + '@' + this.config.apiServerHost + ":" + this.config.apiServerPort
                 + '/weatherapi/v1/getLastWeekWeatherInfo/' + locationParam
       console.log("URL1:" + url)
       request({
