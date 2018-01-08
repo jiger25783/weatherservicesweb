@@ -28,6 +28,7 @@ const envVarsSchema = Joi.object({
 }).unknown().required();
 
 const api_server_host = process.env.API_SERVER_HOST || "35.227.124.97"
+const api_server_port = process.env.API_SERVER_PORT || "8087"
 
 /**
  * Server configuration holder.
@@ -60,7 +61,7 @@ export default class ServerConfig {
       },
       //following can be environemnt veriable as well but hardcoding for now
       apiServerHost: api_server_host,
-      apiServerPort: "8087",
+      apiServerPort: api_server_port,
       apiServerUid: "jigar",
       apiServerPwd: "patel"
     };
